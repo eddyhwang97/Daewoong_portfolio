@@ -1,6 +1,14 @@
+html{
+    scroll-behavior: smooth;
+}
 body *{
     outline: 1px solid red;
 }
 body{
     min-height: 100vh;
+    // background-color: ;
 }
+.cont-box{
+    background-color: transparent;
+}
+
