@@ -1,8 +1,6 @@
 import React from "react";
-import "../css/components/infosection.scss"
+import "../css/components/infosection.scss";
 
 export default function InfoSection() {
-  return (
-    <></>
-  );
+  return <div className="col-9 infosection">infosection</div>;
 }

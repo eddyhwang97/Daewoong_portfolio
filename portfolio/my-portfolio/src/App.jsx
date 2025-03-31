@@ -1,14 +1,19 @@
-import React from 'react'
+import React from "react";
 import "./App.scss";
+import "./css/common/_grid.scss";
 import InfoSection from "@components/InfoSection";
+import SideBar from "./components/SideBar";
 
-function App
-() {
-
+function App() {
   return (
     <>
-      <InfoSection />
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="cont-box">
+        <SideBar />
+        <div className="content">
+          <InfoSection />
+          
+        </div>
+      </div>
     </>
   );
 }
