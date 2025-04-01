@@ -6,9 +6,18 @@ body *{
 }
 body{
     min-height: 100vh;
+    min-width: 400px;
     // background-color: ;
 }
 .cont-box{
     background-color: transparent;
+}
+
+// common
+.title{
+    display: block;
+    font-size: 40px;
+    font-weight: 1000;
+    
 }
 

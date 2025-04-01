@@ -13,4 +13,7 @@ export default defineConfig({
       { find: "@pages", replacement: "/src/pages" },
     ],
   },
+  server: {
+    port: 3000
+  }
 })

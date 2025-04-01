@@ -18,20 +18,14 @@ function SideBar() {
       });
     };
     followSidebar();
-  },[]);
+  }, []);
   return (
     <div className="col-3 " id="sidebar">
       <div className="sidebar">
-        SideBar
         <div className="button myinfo">myinfo</div>
-        <div className="button project">
-          project
-          <ul>
-            <li>first</li>
-            <li>second</li>
-          </ul>
-        </div>
-        <div className="button contact">contact</div>
+        <div className="button interview">interview</div>
+        <div className="button interview">Skill & Tolls</div>
+        <div className="button project">project</div>
       </div>
     </div>
   );

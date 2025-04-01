@@ -1,30 +1,27 @@
 #sidebar {
-    position: relative;
-    height: 200vh;
-    background-color: transparent;
-    .sidebar {
-       position: absolute;
-       left: 0;
-       top: 100px;
-       width: 100%;
-       font-size: 30px;
-       background-color: #FEA341;
-       border: 3px solid #000000;
-       box-sizing: border-box;
-    }
+  position: relative;
+  height: 200vh;
+  background-color: transparent;
+  .sidebar {
+    position: absolute;
+    left: 10%;
+    top: 100px;
+    width: 80%;
+    padding: 20px;
+    font-size: 30px;
+    background-color: #33312e;
+    box-sizing: border-box;
+    color: #8f8f8f;
+    border-radius: 10px;
+  }
   .button {
     cursor: pointer;
   }
-  .project {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      li {
-        font-size: 24px;
-        padding-left: 10px;
-        
-      }
-    }
+  .button:hover {
+    color: white;
   }
+  .button.on{
+    color: white;
+  }
+
 }
