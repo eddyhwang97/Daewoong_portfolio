@@ -1,0 +1,34 @@
+.tab-menu {
+  position: sticky;
+  min-width: 480px;
+  top: 40px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.698);
+  border: 1px solid rgba(255, 255, 255, 0.697);
+  border: 1.3px solid rgba(34, 33, 33, 0.208);
+  background-color: rgba(0, 0, 0, 0.419);
+  backdrop-filter: blur(5px);
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.menu li {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+}
+.menu li:hover {
+  color: white;
+}
+.menu li.active {
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "../css/components/infosection.scss";
 
 export default function InfoSection() {
@@ -18,14 +19,13 @@ export default function InfoSection() {
         <ul>
           <li>
             <a href="">
-            <FontAwesomeIcon icon="fa-brands fa-github" />
+              깃허브
             </a>
           </li>
           <li>
             <a href="">
-              <img src="" alt="" />
-            </a>
             벨로그
+            </a>
           </li>
         </ul>
       </section>

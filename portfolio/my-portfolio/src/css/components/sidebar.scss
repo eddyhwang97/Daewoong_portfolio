@@ -4,9 +4,7 @@
   background-color: transparent;
   .sidebar {
     position: absolute;
-    left: 10%;
     top: 100px;
-    width: 80%;
     padding: 20px;
     font-size: 30px;
     background-color: #33312e;
@@ -14,13 +12,13 @@
     color: #8f8f8f;
     border-radius: 10px;
   }
-  .button {
+  li {
     cursor: pointer;
   }
-  .button:hover {
+  li:hover {
     color: white;
   }
-  .button.on{
+  li.on{
     color: white;
   }
 
