@@ -1,5 +1,5 @@
 {
-  "name": "my-portfolio",
+  "name": "portfolio2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,18 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-brands-svg-icons": "^6.7.2",
-    "@fortawesome/free-regular-svg-icons": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@tailwindcss/vite": "^4.0.14",
-    "daisyui": "^5.0.3",
     "jquery": "^3.7.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "scss": "^0.2.4",
-    "tailwindcss": "^4.0.14"
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -32,8 +24,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
-    "prettier": "3.5.3",
-    "sass-embedded": "^1.85.1",
+    "sass-embedded": "^1.86.3",
     "vite": "^6.2.0"
   }
 }
