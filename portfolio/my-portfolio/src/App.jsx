@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      
+      <div className='columns-7xl'></div>
     </>
   )
 }
