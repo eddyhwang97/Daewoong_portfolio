@@ -6,9 +6,9 @@ function App() {
   const [projects, setProjects] = useState(false);
   useEffect(() => {
     if (projects) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   }, [projects]);
   return (
@@ -68,7 +68,7 @@ function App() {
               <h2 className="project-title">프로젝트 제목</h2>
             </article>
           </div>
-          {projects === true && <ProjectDetail />}
+          {projects === true && <ProjectDetail projects={projects} setProjects={setProjects} />}
         </section>
       </div>
     </>
