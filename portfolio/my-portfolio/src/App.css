@@ -1,3 +1,7 @@
+html{
+  scrollbar-width: none;
+
+}
 body {
   margin: 0;
   padding: 0;
@@ -32,16 +36,23 @@ header {
   }
 }
 .header-menu {
+  height: 100%;
   display: flex;
-  gap: 20px;
   > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    height: 100%;
     text-decoration: none;
     color: #000;
     font-size: 30px;
     font-weight: bold;
+    line-height: 100%;
     cursor: pointer;
     &:hover {
-      color: #102f95;
+      color: #fff;
+      background-color: #000;
       transition: all 0.3s ease;
     }
   }
@@ -65,11 +76,12 @@ header {
   }
   &:last-child {
     margin-bottom: 0;
+    padding-bottom: 50px;
   }
   > h1 {
     width: 100%;
     font-size: 50px;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
   }
 }
@@ -118,15 +130,39 @@ header {
 .about-me {
   width: 90%;
   display: flex;
+  gap: 10px;
 }
 .interview {
   flex: 1;
 }
+.list {
+  > ul {
+    list-style: none;
+    padding: 0;
+    > li {
+      margin: 20px 0;
+      > img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+.list-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.list-content {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .profile-image {
@@ -141,6 +177,7 @@ header {
   justify-content: center;
   align-items: start;
   flex: 1;
+  gap: 5px;
   padding: 10px;
   > h1 {
     font-size: 30px;
@@ -160,25 +197,73 @@ header {
   }
 }
 
-.projects {
-  display: flex;
-  gap: 20px;
-  width: 100%;
+.skill-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1270px) {
+  .skill-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.skill {
+  width: 300px;
+  background-color: rgb(245, 245, 247);
+  border-radius: 10px;
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  > h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 20px 0;
+  }
+}
+.skill > .list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 30px 10px;
+  > div {
+    width: 70px;
+    height: 70px;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1270px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .project {
   position: relative;
-  width: 250px;
+  width: 300px;
   height: 380px;
   border-radius: 10px;
   background-color: #e1b3b3;
   cursor: pointer;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 .project:hover {
-  translate: 0 -5px;
-  transition: all 0.3s ease;
+  scale: 1.01;
 }
 .project-thumbnail {
   width: 100%;

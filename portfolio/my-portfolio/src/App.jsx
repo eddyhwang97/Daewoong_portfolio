@@ -70,9 +70,9 @@ function App() {
                 <div className="list">
                   <ul>
                     <li>
-                      <h2 className="list-title">-개발자를 선택한 이유</h2>
+                      <h2 className="list-title">1. 개발자를 선택한 이유</h2>
                       <span className="list-content">
-                        개발자를 알게된 계기는 카페에서 키오스크를 사용하면서 부터입니다.
+                        개발자라는 직업을 알게된 계기는 카페에서 키오스크를 사용하면서 부터입니다.
                         <br />
                         키오스크를 사용하면서 복잡함에 불편함을 느껴 이런걸 만드려면 무엇을 해야할까? 라는 생각을 하게 되었고,
                         <br />
@@ -80,7 +80,7 @@ function App() {
                       </span>
                     </li>
                     <li>
-                      <h2 className="list-title">-성장이 주는 즐거움</h2>
+                      <h2 className="list-title">2. 성장이 주는 즐거움</h2>
                       <span className="list-content">
                         새로운 프로젝트를 들어가면서 전과는 다른 기술을 사용해보고
                         <br />
@@ -90,13 +90,15 @@ function App() {
                       </span>
                     </li>
                     <li>
-                      <h2 className="list-title">-협력의 중요성</h2>
+                      <h2 className="list-title">3. 협력, 소통, 배려</h2>
                       <span className="list-content">
-                        새로운 프로젝트를 들어가면서 전과는 다른 기술을 사용해보고
+                        일에 있어 중요하다고 생각하는 것은 협력, 소통, 배려입니다.
                         <br />
-                        그 기술을 사용하면서 내가 성장하는 모습을 느끼는게 너무 좋습니다.
+                        협력은 팀원들과 함께 일하는 것에서 가장 중요하다고 생각합니다.
                         <br />
-                        이런 것들이 바로 개발을 하며 느끼는 즐거움이 아닐까 생각합니다.
+                        소통은 팀원들과의 원활한 소통을 통해 문제를 해결하는 것이 중요합니다.
+                        <br />
+                        배려는 팀원들의 의견을 존중하고, 서로의 입장을 이해하는 것이 중요합니다.
                       </span>
                     </li>
                   </ul>
@@ -122,7 +124,37 @@ function App() {
         </section>
         <section className="section section-3">
           <h1>Skills</h1>
-          <div>내가 가진 기술 스택</div>
+          <div className="skill-box">
+            <div className="skill">
+              <h3>Front-End</h3>
+              <div className="list">
+                <div><img src="./assets/html.png" alt="html" /></div>
+                <div><img src="./assets/css.png" alt="css" /></div>
+                <div><img src="./assets/js.png" alt="js" /></div>
+              </div>
+            </div>
+            <div className="skill">
+              <h3>Tools</h3>
+               <div className="list">
+                <div><img src="./assets/react.png" alt="react" /></div>
+                <div><img src="./assets/figma.png" alt="figma" /></div>
+              </div>
+            </div>
+            <div className="skill">
+              <h3>Colaboration</h3>
+               <div className="list">
+                <div><img src="./assets/github.png" alt="github" /></div>
+                <div><img src="./assets/notion.png" alt="notion" /></div>
+                <div><img src="./assets/slack.png" alt="slack" /></div>
+              </div>
+            </div>
+            <div className="skill">
+              <h3>ETC</h3>
+               <div className="list">
+                <div><img src="./assets/firebase.png" alt="firebase" /></div>
+              </div>
+            </div>
+          </div>
         </section>
         <section className="section section-4">
           <h1>PROJECT</h1>
