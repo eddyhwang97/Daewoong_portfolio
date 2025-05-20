@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import ProjectDetail from "./components/ProjectDetail";
-
+import $ from "jquery";
 function App() {
   const [projects, setProjects] = useState(false);
   useEffect(() => {
@@ -41,6 +41,41 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const $project = $(".project");
+  },[])
+
+  const projectsData = [
+    {
+      id: 1,
+      title: "프로젝트 제목",
+      thumbnail: "./assets/trippicker.png",
+      description: "프로젝트 설명",
+      link: "https://eddyhwang97.github.io/TRIP-PICKER-PROJECT/",
+    },
+    {
+      id: 2,
+      title: "프로젝트 제목",
+      thumbnail: "./assets/7788.png",
+      description: "프로젝트 설명",
+      link: "https://eddyhwang97.github.io/FED-TEAM-7788/project/build/",
+    },
+    {
+      id: 3,
+      title: "프로젝트 제목",
+      thumbnail: "./assets/tamburins.png",
+      description: "프로젝트 설명",
+      link: "https://eddyhwang97.github.io/FED-TEAM-PJ-6401/",
+    },
+    {
+      id: 4,
+      title: "프로젝트 제목",
+      thumbnail: "./assets/tamburins.png",
+      description: "프로젝트 설명",
+      link: "https://eddyhwang97.github.io/FED-TEAM-PJ-6401/",
+    },
+  ];
   return (
     <>
       <header className="header">
@@ -128,53 +163,63 @@ function App() {
             <div className="skill">
               <h3>Front-End</h3>
               <div className="list">
-                <div><img src="./assets/html.png" alt="html" /></div>
-                <div><img src="./assets/css.png" alt="css" /></div>
-                <div><img src="./assets/js.png" alt="js" /></div>
+                <div>
+                  <img src="./assets/html.png" alt="html" />
+                </div>
+                <div>
+                  <img src="./assets/css.png" alt="css" />
+                </div>
+                <div>
+                  <img src="./assets/js.png" alt="js" />
+                </div>
               </div>
             </div>
             <div className="skill">
               <h3>Tools</h3>
-               <div className="list">
-                <div><img src="./assets/react.png" alt="react" /></div>
-                <div><img src="./assets/figma.png" alt="figma" /></div>
+              <div className="list">
+                <div>
+                  <img src="./assets/react.png" alt="react" />
+                </div>
+                <div>
+                  <img src="./assets/figma.png" alt="figma" />
+                </div>
               </div>
             </div>
             <div className="skill">
               <h3>Colaboration</h3>
-               <div className="list">
-                <div><img src="./assets/github.png" alt="github" /></div>
-                <div><img src="./assets/notion.png" alt="notion" /></div>
-                <div><img src="./assets/slack.png" alt="slack" /></div>
+              <div className="list">
+                <div>
+                  <img src="./assets/github.png" alt="github" />
+                </div>
+                <div>
+                  <img src="./assets/notion.png" alt="notion" />
+                </div>
+                <div>
+                  <img src="./assets/slack.png" alt="slack" />
+                </div>
               </div>
             </div>
             <div className="skill">
               <h3>ETC</h3>
-               <div className="list">
-                <div><img src="./assets/firebase.png" alt="firebase" /></div>
+              <div className="list">
+                <div>
+                  <img src="./assets/firebase.png" alt="firebase" />
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section className="section section-4">
           <h1>PROJECT</h1>
-          <div className="projects">
-            <article className="project" onClick={() => setProjects(true)}>
-              <div className="project-thumbnail">{/* <img src="" alt="썸네일" /> */}</div>
-              <h2 className="project-title">프로젝트 제목</h2>
-            </article>
-            <article className="project" onClick={() => setProjects(true)}>
-              <div className="project-thumbnail">{/* <img src="" alt="썸네일" /> */}</div>
-              <h2 className="project-title">프로젝트 제목</h2>
-            </article>
-            <article className="project" onClick={() => setProjects(true)}>
-              <div className="project-thumbnail">{/* <img src="" alt="썸네일" /> */}</div>
-              <h2 className="project-title">프로젝트 제목</h2>
-            </article>
-            <article className="project" onClick={() => setProjects(true)}>
-              <div className="project-thumbnail">{/* <img src="" alt="썸네일" /> */}</div>
-              <h2 className="project-title">프로젝트 제목</h2>
-            </article>
+          <div className="projects on-dim">
+            {projectsData.map((project) => (
+              <article key={project.id} className="project" onClick={() => setProjects(true)}>
+                <div className="project-thumbnail">
+                  <img src={project.thumbnail} alt={project.title} />
+                </div>
+                
+              </article>
+            ))}
           </div>
           {projects === true && <ProjectDetail projects={projects} setProjects={setProjects} />}
         </section>

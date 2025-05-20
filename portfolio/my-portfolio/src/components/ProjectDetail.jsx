@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./ProjectDetail.css";
 
-export default function ProjectDetail({ projects, setProjects }) {
+export default function ProjectDetail({ projectData,projects, setProjects }) {
 
     useEffect(() => {
         document.querySelector(".dim").addEventListener("click", (e) => {
@@ -12,6 +12,7 @@ export default function ProjectDetail({ projects, setProjects }) {
             }
         });
     },[])
+
   return (
     <div className="project-container">
         <div className="dim"></div>
