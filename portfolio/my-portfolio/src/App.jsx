@@ -49,31 +49,31 @@ function App() {
   const projectsData = [
     {
       id: 1,
-      title: "프로젝트 제목",
+      title: "트립피커",
       thumbnail: "./assets/trippicker.png",
       description: "프로젝트 설명",
-      link: "https://eddyhwang97.github.io/TRIP-PICKER-PROJECT/",
+      link: "https://trip-picker-steel.vercel.app/",
     },
     {
       id: 2,
-      title: "프로젝트 제목",
+      title: "칙칙북북",
       thumbnail: "./assets/7788.png",
       description: "프로젝트 설명",
       link: "https://eddyhwang97.github.io/FED-TEAM-7788/project/build/",
     },
     {
       id: 3,
-      title: "프로젝트 제목",
+      title: "템버린즈",
       thumbnail: "./assets/tamburins.png",
       description: "프로젝트 설명",
       link: "https://eddyhwang97.github.io/FED-TEAM-PJ-6401/",
     },
     {
       id: 4,
-      title: "프로젝트 제목",
-      thumbnail: "./assets/tamburins.png",
+      title: "카드정보보기",
+      thumbnail: "./assets/viewcard.png",
       description: "프로젝트 설명",
-      link: "https://eddyhwang97.github.io/FED-TEAM-PJ-6401/",
+      link: "https://eddyhwang97.github.io/FED-Project-Daewoong/",
     },
   ];
   return (
@@ -217,7 +217,9 @@ function App() {
                 <div className="project-thumbnail">
                   <img src={project.thumbnail} alt={project.title} />
                 </div>
-                
+                <div className="project-info">
+                  <h2>{project.title}</h2>
+                  </div>
               </article>
             ))}
           </div>
