@@ -1,50 +1,61 @@
-import React from 'react';
-import "./App.css";
-import Navbar from './components/Navbar';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Button from "./components/ui/Button";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Services from "./components/Services";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-32 pb-20">
+      <section id="home" className="container mx-auto px-4 pt-32 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold mb-4">
-              I am Lukman
-              <span className="block text-primary mt-2">
-                Next-Level Web Developer.
+              신입개발자 황대웅 입니다.
+              <span className="block text-[var(--primary)] mt-2">
+                항상 배우고 도전하는 프론트엔드 개발자
               </span>
             </h1>
             <p className="text-gray-400 mb-8">
-              I help their company and experience problems by building
-              accessible and inclusive web products and digital experiences.
+              항상 배우고 도전하는 자세로 새로운 기술과 문제 해결에 열정을 가진
+              신입개발자입니다.
+              <br />
+              팀워크와 소통을 바탕으로 효율적인 개발을 추구합니다.
             </p>
             <div className="flex gap-4">
-              {/* <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 hover:ring-2 hover:ring-primary hover:ring-offset-2 hover:ring-offset-black transition-all duration-300"
-              >
-                Contact Me
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-              >
-                Download CV
-              </Button> */}
+              <Link to="https://github.com/eddyhwang97">
+                <Button
+                  size="lg"
+                  className="bg-[var(--primary)] hover:bg-[var(--primary/90)] hover:ring-2 hover:ring-primary hover:ring-offset-2 hover:ring-offset-black transition-all duration-300"
+                >
+                  Github
+                </Button>
+              </Link>
+              <Link to="https://velog.io/@eddyhwang97">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[var(--primary)] bg-white text-[var(--primary)] hover:bg-[var(--primary)] hover:text-[var(--white)] hover:ring-2"
+                >
+                  Velog
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="relative">
             <div className="relative aspect-square max-w-[400px] mx-auto">
-              {/* <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20design%20(1)-36mT3cZRS54CSZtOrCfN1EpI4EI0tZ.png"
+              <img
+                src="./profile-image.jpeg"
                 alt="Profile"
-                fill
+                fill="true"
                 className="rounded-2xl object-cover"
-                priority
-              /> */}
+                priority="true"
+              />
             </div>
           </div>
         </div>
@@ -54,128 +65,52 @@ function App() {
 
       {/* Other Sections */}
       <div className="container mx-auto px-4">
-        {/* <Services />
+        <Services />
         <Projects />
         <Skills />
-        <Testimonials /> */}
 
         {/* Contact Section */}
         <section className="py-16" id="contact">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Let's Get In Touch</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Have a project in mind or want to discuss potential
-                opportunities? I'm just a message away.
-              </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                      {/* <Phone className="text-primary" size={24} /> */}
+                      <Phone className="text-[var(--primary)]" size={24} />
                     </div>
                     <div>
                       <h3 className="font-semibold">Phone</h3>
-                      <p className="text-gray-400">+91 7074399354</p>
+                      <p className="text-gray-400">+82 1079997539</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                      {/* <Mail className="text-primary" size={24} /> */}
+                      <Mail className="text-[var(--primary)]" size={24} />
                     </div>
                     <div>
                       <h3 className="font-semibold">Email</h3>
-                      <p className="text-gray-400">dev.lukmansk@gmail.com</p>
+                      <p className="text-gray-400">hwangdw1997@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                      {/* <MapPin className="text-primary" size={24} /> */}
+                      <MapPin className="text-[var(--primary)]" size={24} />
                     </div>
                     <div>
                       <h3 className="font-semibold">Address</h3>
-                      <p className="text-gray-400">
-                        Murshidabad, West Bengal, India
-                      </p>
+                      <p className="text-gray-400">경기도 광명시 금당로</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="bg-card border border-primary/20 rounded-lg p-3 w-full focus:outline-none focus:border-primary"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="bg-card border border-primary/20 rounded-lg p-3 w-full focus:outline-none focus:border-primary"
-                  />
-                </div>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="bg-card border border-primary/20 rounded-lg p-3 w-full focus:outline-none focus:border-primary"
-                />
-                <textarea
-                  placeholder="Message"
-                  rows={6}
-                  className="bg-card border border-primary/20 rounded-lg p-3 w-full focus:outline-none focus:border-primary"
-                />
-                {/* <Button size="lg" className="w-full">
-                  Send Message
-                </Button> */}
-              </form>
             </div>
           </div>
         </section>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-card mt-20">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Lukman</h3>
-              <p className="text-gray-400">
-                Full Stack Developer based in your location. Available for
-                freelance work.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About</li>
-                <li>Blog</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Web Development</li>
-                <li>UI/UX Design</li>
-                <li>Mobile Development</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact Us</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>hello@example.com</li>
-                <li>+1234567890</li>
-                <li>Your Address Here</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>© 2024 Lukman. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
