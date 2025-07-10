@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Button from "./components/ui/Button";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -8,11 +8,15 @@ import Skills from "./components/Skills";
 import { Link } from "react-router-dom";
 
 function App() {
+  useEffect(() => {
+    
+  })
   return (
-    <main className="min-h-screen bg-black text-white">
+    <>
+    <main className="min-h-screen bg-gradient-to-b from-[#152851] to-[#2a5a98] text-white">
       <Navbar />
       {/* Hero Section */}
-      <section id="home" className="container mx-auto px-4 pt-32 pb-20">
+      <section id="home" className="container w-3xl mx-auto px-4 pt-32 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold mb-4">
@@ -64,13 +68,13 @@ function App() {
       </section>
 
       {/* Other Sections */}
-      <div className="container mx-auto px-4">
+      <div className="container w-3xl mx-auto px-4">
         <Services />
         <Projects />
         <Skills />
 
         {/* Contact Section */}
-        <section className="py-16" id="contact">
+        <section className="w-3xl py-16" id="contact">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Let's Get In Touch</h2>
@@ -84,7 +88,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Phone</h3>
-                      <p className="text-gray-400">+82 1079997539</p>
+                      <p className="text-white">+82 1079997539</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -93,7 +97,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email</h3>
-                      <p className="text-gray-400">hwangdw1997@gmail.com</p>
+                      <p className="text-white">hwangdw1997@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -102,7 +106,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Address</h3>
-                      <p className="text-gray-400">경기도 광명시 금당로</p>
+                      <p className="text-white">경기도 광명시 금당로</p>
                     </div>
                   </div>
                 </div>
@@ -111,7 +115,8 @@ function App() {
           </div>
         </section>
       </div>
-    </main>
+    </main></>
+      
   );
 }
 
